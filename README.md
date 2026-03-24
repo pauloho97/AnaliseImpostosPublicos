@@ -8,7 +8,9 @@ Projeto de TCC utilizando Python, SQL e Docker para análise de dados públicos.
   - Contém os scripts principais em Python
   - `main.py`: arquivo principal de execução
   - `coleta.py`: responsável por buscar dados de APIs
+  - `limpezaCSV`: padroniza e limpa arquivos CSV
   - `analise.py`: realiza tratamento e análise dos dados
+  - `__init__.py`: arquivo apenas para tornar a pasta app sendo um módulo 
 
 - **data/**
   - Armazena dados coletados (CSV ou temporários)
