@@ -7,7 +7,7 @@ import pandas as pd
 
 # Função para carregar e tratar o CSV, removendo colunas desnecessárias.
 # e convertendo os valores monetários
-def CarregarTratarCsv(caminhoCsv, setor=None):
+def CarregarTratarCsvDespesas(caminhoCsv, setor=None):
     dataframe = pd.read_csv(caminhoCsv, sep=";")
     
     # Remover colunas lixo

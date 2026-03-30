@@ -10,15 +10,15 @@ from app.limpezaDespesasCSV import CarregarTratarCsv, MostrarInfoBasica
 def main():
     # Carregar CSV das despesas para cada setor usando a função do limpezaDespesasCSV.py
     # Carregar apenas o CSV da saúde.
-    dataFrameSaude = CarregarTratarCsv("data/despesas_saude_subfuncao.csv", setor="Saúde")
+    dataFrameSaude = CarregarTratarCsvDespesas("data/despesas_saude_subfuncao.csv", setor="Saúde")
     # Carregar apenas o CSV da educação
-    dataFrameEducacao = CarregarTratarCsv("data/despesas_educacao_subfuncao.csv", setor="Educação")
+    dataFrameEducacao = CarregarTratarCsvDespesas("data/despesas_educacao_subfuncao.csv", setor="Educação")
     # Carregar apenas o CSV da segurança pública
-    dataFrameSegurancaPublica = CarregarTratarCsv("data/despesas_seguranca_publica_subfuncao.csv", setor="Segurança Pública")
+    dataFrameSegurancaPublica = CarregarTratarCsvDespesas("data/despesas_seguranca_publica_subfuncao.csv", setor="Segurança Pública")
     # Carregar apenas o CSV do misnistério dos transportes
-    dataFrameTransportes = CarregarTratarCsv("data/despesas_ministerio_transportes_subfuncao.csv", setor="Transportes")
+    dataFrameTransportes = CarregarTratarCsvDespesas("data/despesas_ministerio_transportes_subfuncao.csv", setor="Transportes")
     # Carregar apenas o CSV da previdência social
-    dataFramePrevidenciaSocial = CarregarTratarCsv("data/despesas_previdencia_social_subfuncao.csv", setor="Previdência Social")
+    dataFramePrevidenciaSocial = CarregarTratarCsvDespesas("data/despesas_previdencia_social_subfuncao.csv", setor="Previdência Social")
 
     # Carregar CSV das receitas para cada setor usando a função do limpezaArrecadacoesCSV.py
     # Carregar apenas o CSV da saúde
