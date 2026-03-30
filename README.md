@@ -1,6 +1,7 @@
 # Análise de Impostos Públicos
 
 Projeto de TCC utilizando Python, SQL e Docker para análise de dados públicos.
+Compara arrecadações x gastos públicos.
 
 ## 📁 Estrutura do Projeto
 
@@ -8,7 +9,8 @@ Projeto de TCC utilizando Python, SQL e Docker para análise de dados públicos.
   - Contém os scripts principais em Python
   - `main.py`: arquivo principal de execução
   - `coleta.py`: responsável por buscar dados de APIs
-  - `limpezaCSV`: padroniza e limpa arquivos CSV
+  - `limpezaArrecadacoesCSV`: padroniza e limpa arquivos  das arrecadações em CSV
+  - `limpezaArrecadacoesCSV`: padroniza e limpa arquivos  das despesas em CSV
   - `analise.py`: realiza tratamento e análise dos dados
   - `__init__.py`: arquivo apenas para tornar a pasta app sendo um módulo 
 
