@@ -5,7 +5,7 @@
 # - Para rodar no console: python -m app.main
 
 from app.limpezaArrecadacoesCSV import CarregarTratarCsvReceitas
-from app.limpezaDespesasCSV import CarregarTratarCsv, MostrarInfoBasica
+from app.limpezaDespesasCSV import CarregarTratarCsvDespesas, MostrarInfoBasica
 
 def main():
     # Carregar CSV das despesas para cada setor usando a função do limpezaDespesasCSV.py
