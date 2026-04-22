@@ -1,4 +1,21 @@
+# Dependências principais
 pandas
 requests
 sqlalchemy
 pytest
+
+# Cliente oficial Data Commons (novo)
+datacommons-client
+
+# Visualização e análise
+matplotlib
+seaborn
+
+# Manipulação de dados
+numpy
+
+# Ambiente interativo Jupyter
+jupyter
+notebook
+jupyterlab
+ipykernel
