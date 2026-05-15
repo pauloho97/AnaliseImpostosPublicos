@@ -22,6 +22,10 @@ def CarregarTratarCsvReceitas(caminhoCsv, setor=None):
         )
         dataframe[coluna] = pd.to_numeric(dataframe[coluna], errors="coerce")
     
+    # --- MELHORIA: TRATAMENTO DE NULOS ---
+    # Converte qualquer valor vazio (NaN) nas colunas financeiras para 0
+    dataframe[ColunaValores] = dataframe[ColunaValores].fillna(0)
+    
     # Converter coluna de porcentagem (se quiser usar)
     if "% Previsto/Realizado" in dataframe.columns:
         dataframe["% Previsto/Realizado"] = (
@@ -31,6 +35,9 @@ def CarregarTratarCsvReceitas(caminhoCsv, setor=None):
             .str.replace(",", ".", regex=False)
         )
         dataframe["% Previsto/Realizado"] = pd.to_numeric(dataframe["% Previsto/Realizado"], errors="coerce")
+        
+        # Também garante que a porcentagem não seja nula
+        dataframe["% Previsto/Realizado"] = dataframe["% Previsto/Realizado"].fillna(0)
     
     # Adicionar coluna Setor (se informado)
     if setor:
@@ -38,5 +45,6 @@ def CarregarTratarCsvReceitas(caminhoCsv, setor=None):
     
     return dataframe
 
+# Teste de validação
 df = CarregarTratarCsvReceitas("data/receitas_saude.csv")
 print(df.dtypes)
