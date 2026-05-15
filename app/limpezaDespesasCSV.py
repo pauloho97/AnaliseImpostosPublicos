@@ -31,9 +31,14 @@ def CarregarTratarCsvDespesas(caminhoCsv, setor=None):
         )
         dataframe[coluna] = pd.to_numeric(dataframe[coluna], errors="coerce")
     
+    # --- MELHORIA: TRATAMENTO DE NULOS ---
+    # Converte qualquer valor vazio (NaN) nas colunas de despesa para 0
+    # Isso garante que a soma aritmética no SQL ou Pandas funcione corretamente
+    dataframe[ColunaValores] = dataframe[ColunaValores].fillna(0)
+    # -------------------------------------
+    
     # Converter Mês Ano para datetime
     dataframe["MesAno"] = pd.to_datetime(dataframe["Mês Ano"], format="%m/%Y")
-
 
     # Adicionar coluna Setor (se informado)
     if setor:
